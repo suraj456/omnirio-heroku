@@ -7,7 +7,8 @@ module.exports = {
         try{
             fs.readFile(source, (err, data) => {
                 if (err) reject(err);
-                resolve(data);
+                let res = data ? JSON.parse(data) : null
+                resolve(res);
             }); 
         } catch(err){
             reject(err)
