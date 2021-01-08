@@ -19,6 +19,7 @@ app.use(bodyParser.json())
 
 var routes = require('./app/routes')
 routes(app)
+
 app.use(express.static(`./public`));
 
 app.listen(port, () => {
